@@ -7,7 +7,9 @@
     in {
     devShells.x86_64-linux.default = (pkgsFor "x86_64-linux").mkShell {
       buildInputs = with pkgsFor "x86_64-linux";[
-        nodejs_23
+        yarn
+        nodePackages.typescript-language-server
+        nodejs
       ];
     };
   };
